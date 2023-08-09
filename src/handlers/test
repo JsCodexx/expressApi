@@ -1,0 +1,7 @@
+const { Attendance } = require("../model");
+
+app.post("/", async (req, res) => {
+  const { name, age } = req.body;
+  const newUser = new Attendance({ name, age });
+  const response = await newUser.save();
+});
